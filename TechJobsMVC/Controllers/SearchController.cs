@@ -34,9 +34,10 @@ namespace TechJobsMVC.Controllers
                     jobs = null;
                 }
             }
-            
+
+            ViewBag.columns = ListController.ColumnChoices;
             ViewBag.searchedJobs = jobs;
-            return View();
+            return View("index");
         }
 
         // TODO #3: Create an action method to process a search request and render the updated search view. 
